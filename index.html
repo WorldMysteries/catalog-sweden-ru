@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Каталог шведской литературы</title>
+<style>
+  :root{
+    --bg:#f4f8fb; --paper:#ffffff; --ink:#1b2530; --muted:#667587;
+    --accent:#006aa7; --gold:#e8b400; --line:#d9e4ec; --hero:#00537f;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{--bg:#10171d;--paper:#18222b;--ink:#e9f0f5;--muted:#9bacba;--accent:#6cc0f0;--gold:#f2c94c;--line:#2a3743;--hero:#06293d;}
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.55}
+  header{text-align:center;padding:64px 20px 40px;color:#f3f8fb;position:relative;
+    background:linear-gradient(135deg,var(--hero),#006aa7)}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:8px;background:#fecc02}
+  header h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.02em}
+  header h1 span{color:#fecc02}
+  header p{margin:0;color:#cfe4f0;font-style:italic;font-size:1.1rem}
+  .ornament{color:#fecc02;letter-spacing:.6em;margin-top:14px}
+  nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+    padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center}
+  nav a{color:var(--ink);text-decoration:none;padding:6px 14px;border:1px solid var(--line);
+    border-radius:999px;font-size:.95rem;transition:.2s;background:var(--paper)}
+  nav a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+  #search{padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:var(--paper);
+    color:var(--ink);font:inherit;min-width:220px}
+  #search:focus{outline:2px solid var(--gold)}
+  main{max-width:1150px;margin:0 auto;padding:30px 20px 60px}
+  section{margin-top:56px;scroll-margin-top:80px}
+  section h2{font-size:2rem;margin:0 0 6px;display:flex;align-items:center;gap:14px}
+  section h2 .ico{font-size:1.6rem}
+  section h2::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+  .desc{color:var(--muted);margin:0 0 22px;font-style:italic}
+  .authors{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:20px}
+  .author{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--accent);
+    border-radius:12px;padding:20px 22px;box-shadow:0 2px 8px rgba(0,0,0,.05);transition:.25s}
+  .author:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(0,0,0,.14);border-top-color:var(--gold)}
+  .author h3{margin:0 0 2px;font-size:1.35rem;color:var(--accent)}
+  .years{font-size:.85rem;color:var(--muted);margin-bottom:10px;display:block}
+  .author ul{list-style:none;margin:0;padding:0}
+  .author li{border-top:1px dashed var(--line)}
+  .author li a{display:block;padding:8px 2px;color:var(--ink);text-decoration:none;transition:.2s}
+  .author li a:hover{color:var(--accent);padding-left:8px}
+  .hidden{display:none!important}
+  #empty{text-align:center;color:var(--muted);margin-top:40px;display:none}
+  footer{text-align:center;padding:30px;color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Каталог <span>шведской литературы</span></h1>
+  <p>Разделы · писатели · произведения</p>
+  <div class="ornament">❦ ❦ ❦</div>
+</header>
+
+<nav>
+  <a href="#romany">Романы</a>
+  <a href="#detskaya">Детская литература</a>
+  <a href="#poeziya">Поэзия</a>
+  <a href="#drama">Драматургия</a>
+  <a href="#detektiv">Детектив и нуар</a>
+  <a href="#nobel">Нобелевские лауреаты</a>
+  <a href="#sovremennaya">Современная проза</a>
+  <input id="search" type="search" placeholder="🔍 Поиск писателя или книги…">
+</nav>
+
+<main>
+
+<section id="romany">
+  <h2><span class="ico">📖</span>Романы</h2>
+  <p class="desc">От социальной сатиры Стриндберга до больших эпопей XX века.</p>
+  <div class="authors">
+    <article class="author"><h3>Август Стриндберг</h3><span class="years">1849 – 1912</span>
+      <ul>
+        <li><a href="krasnaya-komnata/">Красная комната</a></li>
+        <li><a href="lyudi-s-ostrova-khemso/">Люди с острова Хемсё</a></li>
+      </ul></article>
+    <article class="author"><h3>Сельма Лагерлёф</h3><span class="years">1858 – 1940</span>
+      <ul>
+        <li><a href="saga-o-yeste-berlinge/">Сага о Йёсте Берлинге</a></li>
+        <li><a href="perstren-lovenshyoldov/">Перстень Лёвеншёльдов</a></li>
+        <li><a href="chudesnoe-puteshestvie-nilsa/">Чудесное путешествие Нильса Хольгерссона по Швеции</a></li>
+      </ul></article>
+    <article class="author"><h3>Яльмар Сёдерберг</h3><span class="years">1869 – 1941</span>
+      <ul>
+        <li><a href="doktor-glas/">Доктор Глас</a></li>
+        <li><a href="sereznaya-igra/">Серьёзная игра</a></li>
+      </ul></article>
+    <article class="author"><h3>Пер Лагерквист</h3><span class="years">1891 – 1974</span>
+      <ul>
+        <li><a href="varavva/">Варавва</a></li>
+        <li><a href="karlik/">Карлик</a></li>
+        <li><a href="palach/">Палач</a></li>
+      </ul></article>
+    <article class="author"><h3>Вильхельм Муберг</h3><span class="years">1898 – 1973</span>
+      <ul>
+        <li><a href="emigranty/">Эмигранты</a></li>
+        <li><a href="immigranty/">Иммигранты</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="detskaya">
+  <h2><span class="ico">🧸</span>Детская литература</h2>
+  <p class="desc">Шведские сказки, которые читают по всему миру.</p>
+  <div class="authors">
+    <article class="author"><h3>Астрид Линдгрен</h3><span class="years">1907 – 2002</span>
+      <ul>
+        <li><a href="pippi-dlinnyychulok/">Пеппи Длинныйчулок</a></li>
+        <li><a href="malysh-i-karlson/">Малыш и Карлсон, который живёт на крыше</a></li>
+        <li><a href="emil-iz-lenneberi/">Эмиль из Лённеберги</a></li>
+        <li><a href="bratya-lvinoe-serdtse/">Братья Львиное Сердце</a></li>
+        <li><a href="mio-moy-mio/">Мио, мой Мио</a></li>
+        <li><a href="rony-doch-razboynika/">Рони, дочь разбойника</a></li>
+      </ul></article>
+    <article class="author"><h3>Сельма Лагерлёф</h3><span class="years">1858 – 1940</span>
+      <ul>
+        <li><a href="nils-kholgersson/">Чудесное путешествие Нильса Хольгерссона</a></li>
+        <li><a href="legendy-o-khriste/">Легенды о Христе</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="poeziya">
+  <h2><span class="ico">🪶</span>Поэзия</h2>
+  <p class="desc">От застольных песен XVIII века до космической эпопеи и современной лирики.</p>
+  <div class="authors">
+    <article class="author"><h3>Карл Микаэль Бельман</h3><span class="years">1740 – 1795</span>
+      <ul>
+        <li><a href="poslaniya-fredmana/">Послания Фредмана</a></li>
+        <li><a href="pesni-fredmana/">Песни Фредмана</a></li>
+      </ul></article>
+    <article class="author"><h3>Эсайас Тегнер</h3><span class="years">1782 – 1846</span>
+      <ul>
+        <li><a href="saga-o-fritiofe/">Сага о Фритьофе</a></li>
+      </ul></article>
+    <article class="author"><h3>Гуннар Экелёф</h3><span class="years">1907 – 1968</span>
+      <ul>
+        <li><a href="divan-o-knyaze-emgione/">Диван о князе Эмгионе</a></li>
+      </ul></article>
+    <article class="author"><h3>Харри Мартинсон</h3><span class="years">1904 – 1978</span>
+      <ul>
+        <li><a href="aniara/">Аниара</a></li>
+        <li><a href="doroga-v-klokrike/">Дорога в Клокрике</a></li>
+      </ul></article>
+    <article class="author"><h3>Тумас Транстрёмер</h3><span class="years">1931 – 2015</span>
+      <ul>
+        <li><a href="17-stikhotvoreniy/">17 стихотворений</a></li>
+        <li><a href="bolshaya-zagadka/">Большая загадка</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="drama">
+  <h2><span class="ico">🎭</span>Драматургия</h2>
+  <p class="desc">Психологическая драма — главный шведский вклад в мировой театр.</p>
+  <div class="authors">
+    <article class="author"><h3>Август Стриндберг</h3><span class="years">1849 – 1912</span>
+      <ul>
+        <li><a href="frekken-yuliya/">Фрёкен Юлия</a></li>
+        <li><a href="otets/">Отец</a></li>
+        <li><a href="plyaska-smerti/">Пляска смерти</a></li>
+        <li><a href="igra-snov/">Игра снов</a></li>
+      </ul></article>
+    <article class="author"><h3>Ингмар Бергман</h3><span class="years">1918 – 2007</span>
+      <ul>
+        <li><a href="stseny-iz-supruzheskoy-zhizni/">Сцены из супружеской жизни</a></li>
+        <li><a href="fanni-i-aleksandr/">Фанни и Александр</a></li>
+      </ul></article>
+    <article class="author"><h3>Пер Улов Энквист</h3><span class="years">1934 – 2020</span>
+      <ul>
+        <li><a href="noch-tribad/">Ночь трибад</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="detektiv">
+  <h2><span class="ico">🔦</span>Детектив и нуар</h2>
+  <p class="desc">«Скандинавский нуар»: мрачные расследования и социальный реализм.</p>
+  <div class="authors">
+    <article class="author"><h3>Май Шёвалль и Пер Валё</h3><span class="years">1935 – 2020 · 1926 – 1975</span>
+      <ul>
+        <li><a href="smeyushchiysya-politseyskiy/">Смеющийся полицейский</a></li>
+        <li><a href="chelovek-na-balkone/">Человек на балконе</a></li>
+        <li><a href="rozanna/">Розанна</a></li>
+      </ul></article>
+    <article class="author"><h3>Хеннинг Манкель</h3><span class="years">1948 – 2015</span>
+      <ul>
+        <li><a href="ubiytsy-bez-litsa/">Убийцы без лица</a></li>
+        <li><a href="sobaki-rigi/">Собаки Риги</a></li>
+        <li><a href="belaya-lvitsa/">Белая львица</a></li>
+      </ul></article>
+    <article class="author"><h3>Стиг Ларссон</h3><span class="years">1954 – 2004</span>
+      <ul>
+        <li><a href="devushka-s-tatuirovkoy-drakona/">Девушка с татуировкой дракона</a></li>
+        <li><a href="devushka-kotoraya-igrala-s-ognem/">Девушка, которая играла с огнём</a></li>
+        <li><a href="devushka-kotoraya-vzorvala-vozdushnyy-zamok/">Девушка, которая взорвала воздушный замок</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="nobel">
+  <h2><span class="ico">🏅</span>Нобелевские лауреаты</h2>
+  <p class="desc">Шведские авторы, получившие Нобелевскую премию по литературе.</p>
+  <div class="authors">
+    <article class="author"><h3>Сельма Лагерлёф</h3><span class="years">лауреат 1909</span>
+      <ul>
+        <li><a href="saga-o-yeste-berlinge/">Сага о Йёсте Берлинге</a></li>
+        <li><a href="nils-kholgersson/">Чудесное путешествие Нильса Хольгерссона</a></li>
+      </ul></article>
+    <article class="author"><h3>Пер Лагерквист</h3><span class="years">лауреат 1951</span>
+      <ul>
+        <li><a href="varavva/">Варавва</a></li>
+        <li><a href="karlik/">Карлик</a></li>
+      </ul></article>
+    <article class="author"><h3>Харри Мартинсон</h3><span class="years">лауреат 1974 (совместно с Эйвиндом Юнсоном)</span>
+      <ul>
+        <li><a href="aniara/">Аниара</a></li>
+      </ul></article>
+    <article class="author"><h3>Эйвинд Юнсон</h3><span class="years">1900 – 1976 · лауреат 1974</span>
+      <ul>
+        <li><a href="vozvrashchenie-v-itaku/">Возвращение в Итаку</a></li>
+      </ul></article>
+    <article class="author"><h3>Тумас Транстрёмер</h3><span class="years">лауреат 2011</span>
+      <ul>
+        <li><a href="17-stikhotvoreniy/">17 стихотворений</a></li>
+        <li><a href="bolshaya-zagadka/">Большая загадка</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<section id="sovremennaya">
+  <h2><span class="ico">⭐</span>Современная проза</h2>
+  <p class="desc">Исторические романы, юмор и бестселлеры нового века.</p>
+  <div class="authors">
+    <article class="author"><h3>Пер Улов Энквист</h3><span class="years">1934 – 2020</span>
+      <ul>
+        <li><a href="vizit-leyb-medika/">Визит лейб-медика</a></li>
+      </ul></article>
+    <article class="author"><h3>Юнас Юнассон</h3><span class="years">р. 1961</span>
+      <ul>
+        <li><a href="stoletniy-starik/">Столетний старик, который вылез в окно и исчез</a></li>
+      </ul></article>
+    <article class="author"><h3>Фредрик Бакман</h3><span class="years">р. 1981</span>
+      <ul>
+        <li><a href="vtoraya-zhizn-uve/">Вторая жизнь Уве</a></li>
+        <li><a href="babushka-velela-peredat/">Бабушка велела кланяться и передать, что просит прощения</a></li>
+      </ul></article>
+  </div>
+</section>
+
+<p id="empty">Ничего не найдено 📚</p>
+</main>
+
+<footer>© Каталог шведской литературы</footer>
+
+<script>
+  const input = document.getElementById('search');
+  input.addEventListener('input', () => {
+    const q = input.value.trim().toLowerCase();
+    let total = 0;
+    document.querySelectorAll('section').forEach(sec => {
+      let shown = 0;
+      sec.querySelectorAll('.author').forEach(card => {
+        const authorMatch = card.querySelector('h3').textContent.toLowerCase().includes(q);
+        let any = false;
+        card.querySelectorAll('li').forEach(li => {
+          const ok = !q || authorMatch || li.textContent.toLowerCase().includes(q);
+          li.classList.toggle('hidden', !ok);
+          if (ok) any = true;
+        });
+        card.classList.toggle('hidden', !any);
+        if (any) shown++;
+      });
+      sec.classList.toggle('hidden', shown === 0);
+      total += shown;
+    });
+    document.getElementById('empty').style.display = total ? 'none' : 'block';
+  });
+</script>
+</body>
+</html>
